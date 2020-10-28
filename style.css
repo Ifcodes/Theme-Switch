@@ -8,6 +8,7 @@ html,body{
 body{
   max-width: 100%;
   height: 100%;
+  transition: background 1s ease-in-out, color 1s ease-in-out;
 }
 nav{
   width: 100%;
@@ -21,6 +22,7 @@ nav{
   top: 0;
   color: white;
   font-family: sans-serif;
+  z-index: 1;
 }
 .heading{
   margin: 40rem;
@@ -31,7 +33,7 @@ nav{
   height: 2rem;
   border-radius: 2rem;
   position: relative;
-  justify-self: self-end;
+  display: flex;
 }
 .mode{
   width: 2rem;
@@ -44,6 +46,8 @@ nav{
   align-items: center;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+  transition: all ease-in-out 1s;
 }
 .main{
   max-width: 80%;
@@ -181,4 +185,26 @@ nav{
   25%, 100%{
     margin-left: 35rem;
   }
+}
+/* dark mode css */
+.dark{
+  transform: rotate(360deg);
+  background-color: white;
+  color: rgba(75, 0, 130, 1)
+}
+.dark-body{
+  background-color: rgba(75, 0, 130, 1);
+  color: white;
+}
+.dark-nav{
+  background-color: white;
+  color: rgba(75, 0, 130, 1);
+}
+.dark-switch{
+  background-color: rgba(75, 0, 130, 1);
+  justify-content: flex-end;
+}
+.dark-main{
+  border: 1px solid rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, .7);
 }
